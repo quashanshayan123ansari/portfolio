@@ -181,7 +181,44 @@ export default function Home() {
               
               {/* TAB: NEURAL MAP */}
               {activeTab === "neural" && (
-                <div style={{ animation: "fadeInUp 0.5s ease forwards" }}>
+                <div style={{ animation: "fadeInUp 0.5s ease forwards", display: "flex", flexDirection: "column", gap: "24px" }}>
+                  
+                  <div style={{ 
+                    background: "rgba(79, 70, 229, 0.1)", 
+                    border: "1px solid rgba(79, 70, 229, 0.3)", 
+                    borderRadius: "16px", 
+                    padding: "24px", 
+                    textAlign: "center",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    gap: "16px"
+                  }}>
+                    <h3 style={{ color: "#fff", fontSize: "1.2rem", fontWeight: 600 }}>Upgraded Master Neural Map Available</h3>
+                    <p style={{ color: "rgba(255,255,255,0.7)", fontSize: "0.9rem", maxWidth: "600px" }}>
+                      A new, full-screen interactive visualization has been created that maps all achievements, projects, and skills in a polarized hemisphere layout.
+                    </p>
+                    <Link 
+                      href="/neural-graph" 
+                      style={{
+                        background: "#4f46e5",
+                        color: "#fff",
+                        padding: "12px 24px",
+                        borderRadius: "30px",
+                        textDecoration: "none",
+                        fontWeight: 600,
+                        fontSize: "0.95rem",
+                        display: "inline-flex",
+                        alignItems: "center",
+                        gap: "8px",
+                        boxShadow: "0 4px 15px rgba(79, 70, 229, 0.4)",
+                        transition: "transform 0.2s ease"
+                      }}
+                    >
+                      Open Master Neural Map (Full Screen) ↗
+                    </Link>
+                  </div>
+
                   <NeuralNetworkChord />
                 </div>
               )}
