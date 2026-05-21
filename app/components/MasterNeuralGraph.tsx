@@ -874,7 +874,6 @@ export default function MasterNeuralGraph() {
       const related = nodeId === "center"
         ? allConnections.filter((c) => c.type !== "background")
         : allConnections.filter((c) => c.from === nodeId || c.to === nodeId);
-
       related.forEach((c) => {
         photons.push({
           from: c.from,
@@ -939,9 +938,7 @@ export default function MasterNeuralGraph() {
           // Get all connections connected directly to this node (or all if center)
           const activeConns = matched.id === "center"
             ? allConnections.filter((c) => c.type !== "background")
-            : allConnections.filter(
-                (c) => c.from === matched.id || c.to === matched.id
-              );
+            : allConnections.filter((c) => c.from === matched.id || c.to === matched.id);
           setActiveConnections(activeConns);
         }
       } else {
@@ -1058,7 +1055,7 @@ export default function MasterNeuralGraph() {
 
         // Check if connection is highlighted due to hover
         const isHighlighted = activeId
-          ? activeId === "center" || conn.from === activeId || conn.to === activeId
+          ? (activeId === "center" || conn.from === activeId || conn.to === activeId)
           : false;
 
         // Skip rendering active lines in this pass
@@ -1091,7 +1088,7 @@ export default function MasterNeuralGraph() {
         if (conn.type === "background") return;
 
         const isHighlighted = activeId
-          ? activeId === "center" || conn.from === activeId || conn.to === activeId
+          ? (activeId === "center" || conn.from === activeId || conn.to === activeId)
           : false;
 
         if (!isHighlighted) return;
@@ -1123,7 +1120,7 @@ export default function MasterNeuralGraph() {
         const pos = getNodePosition(node);
         const isHovered = activeId === node.id;
         const isConnectedToHover = activeId
-          ? activeId === "center" || allConnections.some(
+          ? allConnections.some(
               (c) =>
                 (c.from === node.id && c.to === activeId) ||
                 (c.to === node.id && c.from === activeId)
