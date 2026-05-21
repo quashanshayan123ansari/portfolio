@@ -55,7 +55,7 @@ export default function Home() {
                     boxShadow: "0 0 15px rgba(79, 70, 229, 0.15)"
                   }}>
                     <span style={{ display: "inline-block", width: "8px", height: "8px", borderRadius: "50%", background: "var(--primary)", marginRight: "8px", boxShadow: "0 0 8px var(--primary)" }}></span>
-                    AI ENGINEER
+                    ABOUT ME
                   </div>
                 </div>
 
