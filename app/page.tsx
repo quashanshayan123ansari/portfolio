@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import ThreeBackground from "./components/ThreeBackground";
 import NeuralNetworkChord from "./components/NeuralNetworkChord";
 
@@ -159,6 +160,20 @@ export default function Home() {
                 </svg>
                 Neural Map
               </button>
+
+              <Link 
+                href="/neural-graph" 
+                className="tab-btn"
+                style={{ textDecoration: "none" }}
+              >
+                {/* SVG Radial Circular Mapping Icon */}
+                <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                  <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="2" strokeDasharray="3 3" />
+                  <circle cx="12" cy="12" r="3" fill="currentColor" />
+                  <path d="M12 3v6M12 15v6M3 12h6M15 12h9" stroke="currentColor" strokeWidth="2" />
+                </svg>
+                Master Neural Map ↗
+              </Link>
             </div>
 
             {/* Dynamic Content Panel */}
