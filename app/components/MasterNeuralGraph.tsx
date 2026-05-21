@@ -871,7 +871,10 @@ export default function MasterNeuralGraph() {
 
     // Emit waves of photons when hovered
     const triggerPhotonBurst = (nodeId: string) => {
-      const related = allConnections.filter((c) => c.from === nodeId || c.to === nodeId);
+      const related = nodeId === "center"
+        ? allConnections.filter((c) => c.type !== "background")
+        : allConnections.filter((c) => c.from === nodeId || c.to === nodeId);
+
       related.forEach((c) => {
         photons.push({
           from: c.from,
@@ -933,10 +936,12 @@ export default function MasterNeuralGraph() {
           setHoveredNode(matched);
           triggerPhotonBurst(matched.id);
 
-          // Get all connections connected directly to this node
-          const activeConns = allConnections.filter(
-            (c) => c.from === matched.id || c.to === matched.id
-          );
+          // Get all connections connected directly to this node (or all if center)
+          const activeConns = matched.id === "center"
+            ? allConnections.filter((c) => c.type !== "background")
+            : allConnections.filter(
+                (c) => c.from === matched.id || c.to === matched.id
+              );
           setActiveConnections(activeConns);
         }
       } else {
@@ -1053,7 +1058,7 @@ export default function MasterNeuralGraph() {
 
         // Check if connection is highlighted due to hover
         const isHighlighted = activeId
-          ? conn.from === activeId || conn.to === activeId
+          ? activeId === "center" || conn.from === activeId || conn.to === activeId
           : false;
 
         // Skip rendering active lines in this pass
@@ -1086,7 +1091,7 @@ export default function MasterNeuralGraph() {
         if (conn.type === "background") return;
 
         const isHighlighted = activeId
-          ? conn.from === activeId || conn.to === activeId
+          ? activeId === "center" || conn.from === activeId || conn.to === activeId
           : false;
 
         if (!isHighlighted) return;
@@ -1118,7 +1123,7 @@ export default function MasterNeuralGraph() {
         const pos = getNodePosition(node);
         const isHovered = activeId === node.id;
         const isConnectedToHover = activeId
-          ? allConnections.some(
+          ? activeId === "center" || allConnections.some(
               (c) =>
                 (c.from === node.id && c.to === activeId) ||
                 (c.to === node.id && c.from === activeId)
