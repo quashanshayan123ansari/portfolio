@@ -199,18 +199,186 @@ export default function MasterNeuralGraph() {
 
     // 4. Left Hemisphere Data Nodes (radius 280px)
     const leftDataNodes: GraphNode[] = [
-      // BHU Varanasi Details
+      // BHU Varanasi Details — Degree
       {
         id: "edu_bhu",
         name: "BS in Mathematics (BHU)",
         type: "data",
         hubId: "inst_bhu",
-        angle: 110 * Math.PI / 180,
+        angle: 86 * Math.PI / 180,
         radius: 280,
         color: "hsl(195, 95%, 50%)",
         glowColor: "rgba(6, 182, 212, 0.2)",
         description: "Pursuing theoretical mathematics focusing on algebraic structures, mathematical analysis, and mathematical modeling.",
         url: "https://verify.bhu.ac.in/student/verify/eECba2CD-F10A-dF9F-7Aa0-C9a83f6b2CDc",
+      },
+      // BHU — Calculus
+      {
+        id: "bhu_calculus",
+        name: "Calculus",
+        type: "data",
+        hubId: "inst_bhu",
+        angle: 90 * Math.PI / 180,
+        radius: 290,
+        color: "hsl(195, 90%, 55%)",
+        glowColor: "rgba(6, 182, 212, 0.2)",
+        description: "Single-variable calculus including limits, derivatives, integrals, sequences and series — the foundation of mathematical analysis.",
+      },
+      // BHU — Algebra
+      {
+        id: "bhu_algebra",
+        name: "Algebra",
+        type: "data",
+        hubId: "inst_bhu",
+        angle: 95 * Math.PI / 180,
+        radius: 280,
+        color: "hsl(195, 90%, 55%)",
+        glowColor: "rgba(6, 182, 212, 0.2)",
+        description: "Abstract algebra covering groups, rings, fields, and homomorphisms — structural mathematics underpinning modern cryptography and computation.",
+      },
+      // BHU — Linear Algebra
+      {
+        id: "bhu_linear_algebra",
+        name: "Linear Algebra",
+        type: "data",
+        hubId: "inst_bhu",
+        angle: 100 * Math.PI / 180,
+        radius: 295,
+        color: "hsl(195, 90%, 55%)",
+        glowColor: "rgba(6, 182, 212, 0.2)",
+        description: "Vector spaces, linear maps, eigenvalues, matrix decompositions. Core mathematics driving ML model training and optimization.",
+      },
+      // BHU — Real Analysis
+      {
+        id: "bhu_real_analysis",
+        name: "Real Analysis",
+        type: "data",
+        hubId: "inst_bhu",
+        angle: 105 * Math.PI / 180,
+        radius: 285,
+        color: "hsl(195, 90%, 55%)",
+        glowColor: "rgba(6, 182, 212, 0.2)",
+        description: "Rigorous study of the real number system, metric spaces, convergence, continuity, and Lebesgue integration theory.",
+      },
+      // BHU — Calculus of Several Variables
+      {
+        id: "bhu_multivariable_calc",
+        name: "Calculus of Several Variables",
+        type: "data",
+        hubId: "inst_bhu",
+        angle: 110 * Math.PI / 180,
+        radius: 295,
+        color: "hsl(195, 90%, 55%)",
+        glowColor: "rgba(6, 182, 212, 0.2)",
+        description: "Multivariable differentiation, partial derivatives, gradient, divergence, curl, multiple integrals and surface integrals.",
+      },
+      // BHU — Tensor & Vector Analysis
+      {
+        id: "bhu_tensor_vector",
+        name: "Tensor & Vector Analysis",
+        type: "data",
+        hubId: "inst_bhu",
+        angle: 115 * Math.PI / 180,
+        radius: 280,
+        color: "hsl(195, 90%, 55%)",
+        glowColor: "rgba(6, 182, 212, 0.2)",
+        description: "Covariant and contravariant tensors, Riemannian geometry, differential forms and applications to physics and deep learning.",
+      },
+      // BHU — Internship under MMV
+      {
+        id: "bhu_internship_mmv",
+        name: "Research Internship (MMV)",
+        type: "data",
+        hubId: "inst_bhu",
+        angle: 120 * Math.PI / 180,
+        radius: 295,
+        color: "hsl(180, 90%, 55%)",
+        glowColor: "rgba(6, 212, 212, 0.2)",
+        description: "Research internship at MMV, BHU — exploring complex conformal mappings, advanced function theory, and analytical geometry.",
+      },
+      // BHU — Complex & Conformal Mapping
+      {
+        id: "bhu_conformal_mapping",
+        name: "Complex Conformal Mapping",
+        type: "data",
+        hubId: "inst_bhu",
+        angle: 125 * Math.PI / 180,
+        radius: 285,
+        color: "hsl(195, 90%, 55%)",
+        glowColor: "rgba(6, 182, 212, 0.2)",
+        description: "Analytic functions, Möbius transformations, Schwarz-Christoffel mapping, and applications in fluid dynamics and signal processing.",
+      },
+      // BHU — Data Structures
+      {
+        id: "bhu_data_structures",
+        name: "Data Structures",
+        type: "data",
+        hubId: "inst_bhu",
+        angle: 128 * Math.PI / 180,
+        radius: 295,
+        color: "hsl(195, 90%, 55%)",
+        glowColor: "rgba(6, 182, 212, 0.2)",
+        description: "Arrays, linked lists, trees, heaps, hash tables — algorithmic problem solving core studied at BHU.",
+      },
+      // BHU — Graph Theory
+      {
+        id: "bhu_graph_theory",
+        name: "Graph Theory",
+        type: "data",
+        hubId: "inst_bhu",
+        angle: 131 * Math.PI / 180,
+        radius: 280,
+        color: "hsl(195, 90%, 55%)",
+        glowColor: "rgba(6, 182, 212, 0.2)",
+        description: "Graphs, trees, planarity, coloring, network flows, shortest paths — mathematical foundation for neural network and knowledge graph design.",
+      },
+      // BHU — Complex Analysis
+      {
+        id: "bhu_complex_analysis",
+        name: "Complex Analysis",
+        type: "data",
+        hubId: "inst_bhu",
+        angle: 134 * Math.PI / 180,
+        radius: 290,
+        color: "hsl(195, 90%, 55%)",
+        glowColor: "rgba(6, 182, 212, 0.2)",
+        description: "Analytic functions, Cauchy's theorem, residue theory, Laurent series and complex integration on the Riemann sphere.",
+      },
+      // BHU — Topology
+      {
+        id: "bhu_topology",
+        name: "Topology",
+        type: "data",
+        hubId: "inst_bhu",
+        angle: 137 * Math.PI / 180,
+        radius: 280,
+        color: "hsl(195, 90%, 55%)",
+        glowColor: "rgba(6, 182, 212, 0.2)",
+        description: "Point-set topology, metric spaces, compactness, connectedness, homotopy and fundamental groups — abstract geometric reasoning.",
+      },
+      // BHU — Space Dynamics
+      {
+        id: "bhu_space_dynamics",
+        name: "Space Dynamics",
+        type: "data",
+        hubId: "inst_bhu",
+        angle: 140 * Math.PI / 180,
+        radius: 290,
+        color: "hsl(195, 90%, 55%)",
+        glowColor: "rgba(6, 182, 212, 0.2)",
+        description: "Orbital mechanics, celestial body dynamics, Lagrangian/Hamiltonian mechanics, and astrodynamics studied at BHU.",
+      },
+      // BHU — Number Theory
+      {
+        id: "bhu_number_theory",
+        name: "Number Theory",
+        type: "data",
+        hubId: "inst_bhu",
+        angle: 143 * Math.PI / 180,
+        radius: 280,
+        color: "hsl(195, 90%, 55%)",
+        glowColor: "rgba(6, 182, 212, 0.2)",
+        description: "Divisibility, prime numbers, modular arithmetic, Diophantine equations and cryptographic applications of number-theoretic functions.",
       },
       // IIT Madras Details
       {
@@ -695,7 +863,22 @@ export default function MasterNeuralGraph() {
       proj_chatbot: ["skill_transformers", "skill_langchain", "skill_nextjs", "skill_typescript"],
 
       // Education
+      // Education — BHU degree + all subject nodes
       edu_bhu: ["skill_python", "skill_stats"],
+      bhu_calculus: ["skill_stats", "skill_dl_theory"],
+      bhu_algebra: ["skill_stats", "skill_dl_theory"],
+      bhu_linear_algebra: ["skill_stats", "skill_dl_theory", "skill_scikit"],
+      bhu_real_analysis: ["skill_stats", "skill_dl_theory"],
+      bhu_multivariable_calc: ["skill_stats", "skill_dl_theory"],
+      bhu_tensor_vector: ["skill_dl_theory", "skill_transformers"],
+      bhu_internship_mmv: ["skill_python", "skill_stats"],
+      bhu_conformal_mapping: ["skill_stats", "skill_dl_theory"],
+      bhu_data_structures: ["skill_python", "skill_git", "skill_sql"],
+      bhu_graph_theory: ["skill_python", "skill_dl_theory", "skill_stats"],
+      bhu_complex_analysis: ["skill_stats", "skill_dl_theory"],
+      bhu_topology: ["skill_stats", "skill_dl_theory"],
+      bhu_space_dynamics: ["skill_stats", "skill_python"],
+      bhu_number_theory: ["skill_stats", "skill_python"],
       edu_iitm: ["skill_python", "skill_sql", "skill_r_lang", "skill_stats", "skill_scikit"],
 
       // Certificates
