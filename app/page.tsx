@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import ThreeBackground from "./components/ThreeBackground";
 import NeuralNetworkChord from "./components/NeuralNetworkChord";
@@ -9,6 +9,21 @@ type TabType = "education" | "projects" | "certificates" | "socials" | "neural";
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState<TabType>("projects");
+  const [typedText, setTypedText] = useState("");
+  
+  const fullTerminalText = "> root@aryan_maurya:~$ ./initialize_ai_engineer.sh\n> Loading modules: Deep Learning, Predictive Modeling...\n> Training intelligent deep neural architectures and building highly scalable, data-driven AI systems.\n> Status: High-Performance ML Pipelines [ONLINE]";
+
+  useEffect(() => {
+    let i = 0;
+    const interval = setInterval(() => {
+      setTypedText(fullTerminalText.substring(0, i));
+      i++;
+      if (i > fullTerminalText.length) {
+        clearInterval(interval);
+      }
+    }, 25);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <>
@@ -102,17 +117,42 @@ export default function Home() {
                     Aryan Maurya
                   </h1>
 
-                  {/* Tagline focused heavily on ML and AI */}
-                  <p style={{ 
-                    fontSize: "clamp(1.15rem, 2.5vw, 1.5rem)", 
-                    fontWeight: 400, 
-                    color: "var(--slate-300)", 
-                    lineHeight: 1.6, 
+                  {/* Animated Terminal Text */}
+                  <style>{`
+                    @keyframes blink {
+                      0%, 100% { opacity: 1; }
+                      50% { opacity: 0; }
+                    }
+                  `}</style>
+                  <div style={{ 
+                    fontSize: "clamp(0.95rem, 2vw, 1.15rem)", 
+                    fontWeight: 500, 
+                    color: "#cbd5e1", 
+                    lineHeight: 1.7, 
                     maxWidth: "850px",
-                    marginTop: "0.5rem"
+                    marginTop: "1.5rem",
+                    fontFamily: "var(--font-mono)",
+                    textAlign: "left",
+                    background: "rgba(0, 0, 0, 0.4)",
+                    padding: "20px 24px",
+                    borderRadius: "8px",
+                    border: "1px solid rgba(255, 255, 255, 0.05)",
+                    boxShadow: "inset 0 0 10px rgba(0,0,0,0.5)",
+                    width: "100%",
+                    whiteSpace: "pre-wrap"
                   }}>
-                    Training intelligent deep neural architectures and building highly scalable, data-driven AI systems. Specializing in <strong style={{ color: "#a5b4fc" }}>Deep Learning</strong>, <strong style={{ color: "#a5b4fc" }}>Predictive Modeling</strong>, and <strong style={{ color: "#a5b4fc" }}>High-Performance Machine Learning Pipelines</strong>.
-                  </p>
+                    {typedText}
+                    <span style={{ 
+                      display: "inline-block", 
+                      width: "10px", 
+                      height: "1.2em", 
+                      background: "#22d3ee", 
+                      verticalAlign: "middle", 
+                      marginLeft: "6px",
+                      animation: "blink 1s step-end infinite",
+                      boxShadow: "0 0 8px #22d3ee"
+                    }}></span>
+                  </div>
 
                 {/* Epic Call to Action to Neural Map */}
                 <div style={{ marginTop: "2.5rem" }}>
