@@ -451,7 +451,7 @@ export default function Home() {
                               Banaras Hindu University (BHU)
                             </h4>
                             <p style={{ color: "var(--slate-400)", fontSize: "0.9rem", lineHeight: 1.5, marginBottom: "14px" }}>
-                              Pursuing core theoretical mathematics, focusing heavily on algebraic structures, mathematical analysis, differential geometry, numerical analysis, and computational mathematics. Strengthening analytical problem-solving and rigorous scientific proofs.
+                              Pursuing core theoretical mathematics, focusing heavily on algebraic structures, mathematical analysis, differential geometry, numerical analysis, data analysis, LaTeX typesetting, vector databases, and computational mathematics. Strengthening analytical problem-solving and rigorous scientific proofs.
                             </p>
                             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "12px" }}>
                               <div style={{ fontSize: "0.85rem", color: "var(--foreground)", fontFamily: "var(--font-mono)" }}>
@@ -505,7 +505,7 @@ export default function Home() {
                               Indian Institute of Technology Madras (IITM) (Online)
                             </h4>
                             <p style={{ color: "var(--slate-400)", fontSize: "0.9rem", lineHeight: 1.5, marginBottom: "14px" }}>
-                              Pursuing a rigorous program specializing in Machine Learning, Statistical Modeling, Big Data Analytics, Database Management, and programming frameworks. Gaining deep hands-on expertise in algorithm construction, data processing pipelines, and AI systems.
+                              Pursuing a rigorous program specializing in Machine Learning, Statistical Modeling, Big Data Analytics, Database Management, Algebra, Calculus, and programming frameworks. Gaining deep hands-on expertise in algorithm construction, data processing pipelines, and AI systems.
                             </p>
                             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "12px" }}>
                               <div style={{ fontSize: "0.85rem", color: "var(--foreground)", fontFamily: "var(--font-mono)" }}>

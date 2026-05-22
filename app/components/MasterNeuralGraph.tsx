@@ -77,7 +77,7 @@ export default function MasterNeuralGraph() {
         radius: 140,
         color: "hsl(195, 95%, 50%)",
         glowColor: "rgba(6, 182, 212, 0.3)",
-        description: "BS in Mathematics — Banaras Hindu University. Rigorous academic track covering Calculus, Linear Algebra, Real Analysis, Tensor & Vector Analysis, Graph Theory, Topology, Complex Analysis, Number Theory, and Space Dynamics. Research internship at MMV on Complex Conformal Mapping.",
+        description: "BS in Mathematics — Banaras Hindu University. Rigorous academic track covering Calculus, Linear Algebra, Real Analysis, Tensor & Vector Analysis, Graph Theory, Topology, Complex Analysis, Number Theory, Space Dynamics, Data Analysis, LaTeX, and Vector Databases. Research internship at MMV on Complex Conformal Mapping.",
         url: "https://verify.bhu.ac.in/student/verify/eECba2CD-F10A-dF9F-7Aa0-C9a83f6b2CDc",
       },
       {
@@ -88,7 +88,7 @@ export default function MasterNeuralGraph() {
         radius: 140,
         color: "hsl(195, 95%, 50%)", // Neon Cyan
         glowColor: "rgba(6, 182, 212, 0.3)",
-        description: "BS in Data Science — Indian Institute of Technology Madras (Nationally Ranked #1). Specialized training covering Machine Learning, Deep Learning, Data Science, Statistics, SQL & Databases, Python Programming, R Programming, and software engineering algorithms.",
+        description: "BS in Data Science — Indian Institute of Technology Madras (Nationally Ranked #1). Specialized training covering Machine Learning, Deep Learning, Data Science, Statistics, SQL & Databases, Python Programming, R Programming, software engineering algorithms, Algebra, and Calculus.",
         url: "https://ds.study.iitm.ac.in/student/24F2001627",
       },
       {
@@ -644,7 +644,7 @@ export default function MasterNeuralGraph() {
         name: "Python Programming",
         type: "skill",
         hubId: "domain_modeling",
-        angle: 3 * Math.PI / 180,
+        angle: 2 * Math.PI / 180,
         radius: 280,
         color: "hsl(142, 85%, 50%)",
         glowColor: "rgba(34, 197, 94, 0.2)",
@@ -655,18 +655,29 @@ export default function MasterNeuralGraph() {
         name: "R Programming",
         type: "skill",
         hubId: "domain_modeling",
-        angle: 9 * Math.PI / 180,
+        angle: 7 * Math.PI / 180,
         radius: 280,
         color: "hsl(142, 85%, 50%)",
         glowColor: "rgba(34, 197, 94, 0.2)",
         description: "Statistical aggregations, vector computation, ggplot visualization, and exploratory mathematical analysis.",
       },
       {
+        id: "skill_data_analysis",
+        name: "Data Analysis",
+        type: "skill",
+        hubId: "domain_modeling",
+        angle: 12 * Math.PI / 180,
+        radius: 280,
+        color: "hsl(142, 85%, 50%)",
+        glowColor: "rgba(34, 197, 94, 0.2)",
+        description: "Exploratory data analysis (EDA), data cleaning, statistical plotting, feature profiling, and aggregation pipelines.",
+      },
+      {
         id: "skill_scikit",
         name: "Scikit-Learn & ML",
         type: "skill",
         hubId: "domain_modeling",
-        angle: 15 * Math.PI / 180,
+        angle: 17 * Math.PI / 180,
         radius: 280,
         color: "hsl(142, 85%, 50%)",
         glowColor: "rgba(34, 197, 94, 0.2)",
@@ -677,7 +688,7 @@ export default function MasterNeuralGraph() {
         name: "Statistical Analytics",
         type: "skill",
         hubId: "domain_modeling",
-        angle: 21 * Math.PI / 180,
+        angle: 22 * Math.PI / 180,
         radius: 280,
         color: "hsl(142, 85%, 50%)",
         glowColor: "rgba(34, 197, 94, 0.2)",
@@ -783,6 +794,17 @@ export default function MasterNeuralGraph() {
         glowColor: "rgba(249, 115, 22, 0.2)",
         description: "Branch merging pipelines, commit logs tracking, merge conflicts fixing, and repository coordination.",
       },
+      {
+        id: "skill_latex",
+        name: "LaTeX",
+        type: "skill",
+        hubId: "domain_dev",
+        angle: 65 * Math.PI / 180,
+        radius: 280,
+        color: "hsl(30, 95%, 50%)",
+        glowColor: "rgba(249, 115, 22, 0.2)",
+        description: "Scientific typesetting, academic paper preparation, mathematical formula formatting, and document rendering.",
+      },
     ];
 
     const allNodes: GraphNode[] = [
@@ -842,7 +864,7 @@ export default function MasterNeuralGraph() {
       // Education
       // Education — BHU degree + all subject nodes
       // BHU hub — BS in Mathematics — core math skills
-      inst_bhu: ["skill_python", "skill_stats", "skill_dl_theory", "skill_scikit"],
+      inst_bhu: ["skill_python", "skill_stats", "skill_dl_theory", "skill_scikit", "skill_data_analysis", "skill_latex", "skill_vectordb"],
       // BHU subject nodes
       bhu_calculus: ["skill_stats", "skill_dl_theory"],
       bhu_algebra: ["skill_stats", "skill_dl_theory"],
@@ -858,8 +880,8 @@ export default function MasterNeuralGraph() {
       bhu_topology: ["skill_stats", "skill_dl_theory"],
       bhu_space_dynamics: ["skill_stats", "skill_python"],
       bhu_number_theory: ["skill_stats", "skill_python"],
-      // IITM hub — BS in Data Science — all ML/AI/dev skills
-      inst_iitm: ["skill_python", "skill_sql", "skill_r_lang", "skill_stats", "skill_scikit", "skill_dl_theory", "skill_transformers", "skill_langchain", "skill_typescript", "skill_nextjs", "skill_git", "skill_html_css"],
+      // IITM hub — BS in Data Science — all ML/AI/dev skills + algebra & calculus
+      inst_iitm: ["skill_python", "skill_sql", "skill_r_lang", "skill_stats", "skill_scikit", "skill_dl_theory", "skill_transformers", "skill_langchain", "skill_typescript", "skill_nextjs", "skill_git", "skill_html_css", "bhu_calculus", "bhu_algebra"],
 
       // Certificates
       cert_google_analytics: ["skill_stats", "skill_sql", "skill_r_lang"],
