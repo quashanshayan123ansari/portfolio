@@ -380,19 +380,7 @@ export default function MasterNeuralGraph() {
         glowColor: "rgba(6, 182, 212, 0.2)",
         description: "Divisibility, prime numbers, modular arithmetic, Diophantine equations and cryptographic applications of number-theoretic functions.",
       },
-      // IIT Madras Details
-      {
-        id: "edu_iitm",
-        name: "BS in Data Science (IITM)",
-        type: "data",
-        hubId: "inst_iitm",
-        angle: 130 * Math.PI / 180,
-        radius: 280,
-        color: "hsl(195, 95%, 50%)",
-        glowColor: "rgba(6, 182, 212, 0.2)",
-        description: "Specialized computer science and data science degree focusing on Machine Learning, Database Management, and statistical data modeling.",
-        url: "https://ds.study.iitm.ac.in/student/24F2001627",
-      },
+
       // Google Analytics Details
       {
         id: "cert_google_analytics",
@@ -879,7 +867,7 @@ export default function MasterNeuralGraph() {
       bhu_topology: ["skill_stats", "skill_dl_theory"],
       bhu_space_dynamics: ["skill_stats", "skill_python"],
       bhu_number_theory: ["skill_stats", "skill_python"],
-      edu_iitm: ["skill_python", "skill_sql", "skill_r_lang", "skill_stats", "skill_scikit"],
+      // IITM cross-links now go directly from the hub via primary connections (no duplicate leaf needed)
 
       // Certificates
       cert_google_analytics: ["skill_stats", "skill_sql", "skill_r_lang"],
