@@ -651,13 +651,6 @@ div[class*="glow-"] {
   /* Force hardware acceleration on the parent container */
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
-
-  /* Default theme values (Projects - Green) */
-  --glow-color-1: rgba(16, 185, 129, 0.95);
-  --glow-color-2: rgba(4, 120, 87, 0.6);
-  --glow-core-1: rgba(255, 255, 255, 1);
-  --glow-core-2: rgba(209, 250, 229, 0.95);
-  --glow-core-3: rgba(16, 185, 129, 0.7);
 }
 
 /* Tab specific glow themes */
