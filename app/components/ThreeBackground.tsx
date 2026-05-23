@@ -1,8 +1,13 @@
 "use client";
 
-export default function ThreeBackground() {
+interface ThreeBackgroundProps {
+  activeTab?: string;
+}
+
+export default function ThreeBackground({ activeTab = "projects" }: ThreeBackgroundProps) {
   return (
     <div
+      className={`glow-${activeTab}`}
       style={{
         position: "fixed",
         top: 0,
@@ -11,8 +16,9 @@ export default function ThreeBackground() {
         height: "100vh",
         zIndex: -1,
         pointerEvents: "none",
-        background: "#030303",
+        background: "var(--background)",
         overflow: "hidden",
+        transition: "background 1s cubic-bezier(0.16, 1, 0.3, 1)",
       }}
     >
       {/* High-performance glowing background container and divs */}

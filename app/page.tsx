@@ -9,6 +9,61 @@ type TabType = "education" | "projects" | "certificates" | "socials" | "neural";
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState<TabType>("projects");
+  const [line1, setLine1] = useState("");
+  const [line2, setLine2] = useState("");
+  const [terminalText, setTerminalText] = useState("");
+  const [activeCursor, setActiveCursor] = useState<"line1" | "line2" | "terminal" | "none">("line1");
+
+  useEffect(() => {
+    const text1 = "Hello everyone!";
+    const text2 = "I am Aryan Maurya";
+    const text3 = "automating model training pipelines, streamlining feature stores, configuring kubernetes clusters, and establishing end-to-end MLOps lifecycles.";
+    
+    let i1 = 0;
+    let i2 = 0;
+    let i3 = 0;
+    
+    // Type line 1
+    const timer1 = setInterval(() => {
+      if (i1 < text1.length) {
+        setLine1(text1.substring(0, i1 + 1));
+        i1++;
+      } else {
+        clearInterval(timer1);
+        setActiveCursor("line2");
+        
+        // Type line 2 (starts after a small delay of 200ms)
+        setTimeout(() => {
+          const timer2 = setInterval(() => {
+            if (i2 < text2.length) {
+              setLine2(text2.substring(0, i2 + 1));
+              i2++;
+            } else {
+              clearInterval(timer2);
+              setActiveCursor("terminal");
+              
+              // Type terminal text (starts after a delay of 300ms)
+              setTimeout(() => {
+                const timer3 = setInterval(() => {
+                  if (i3 < text3.length) {
+                    setTerminalText(text3.substring(0, i3 + 1));
+                    i3++;
+                  } else {
+                    clearInterval(timer3);
+                    setActiveCursor("none");
+                  }
+                }, 40); // terminal types slightly faster
+              }, 300);
+            }
+          }, 70);
+        }, 200);
+      }
+    }, 70);
+    
+    return () => {
+      clearInterval(timer1);
+    };
+  }, []);
 
   const handleTabClick = (tab: TabType) => {
     setActiveTab(tab);
@@ -26,36 +81,66 @@ export default function Home() {
   };
 
   return (
-    <>
+    <div className={`glow-${activeTab}`}>
       {/* High-performance lightweight 3D Background */}
-      <ThreeBackground />
+      <ThreeBackground activeTab={activeTab} />
 
 
       {/* Hero Section */}
       <section style={{
         position: "relative",
-        height: "100vh",
+        minHeight: "100vh",
+        height: "auto",
         width: "100vw",
         display: "flex",
         flexDirection: "column",
-        justifyContent: "center",
-        padding: "0 clamp(2rem, 8vw, 8rem)",
+        justifyContent: "space-between",
+        padding: "clamp(3rem, 8vh, 5rem) clamp(1.5rem, 3vw, 2.5rem) clamp(2rem, 5vh, 4rem)",
         overflow: "hidden"
       }}>
         {/* Left-heavy layout */}
-        <div style={{ zIndex: 2, maxWidth: "900px", marginTop: "40px" }}>
+        <div style={{ zIndex: 2, maxWidth: "900px", marginTop: "20px" }}>
           <h1 style={{
-            fontSize: "clamp(2.5rem, 6vw, 4.8rem)",
+            fontSize: "clamp(2.2rem, 5.5vw, 4.5rem)",
             fontWeight: 400,
             lineHeight: 1.15,
             letterSpacing: "-0.02em",
             color: "#d4d4d8",
-            marginBottom: "2.5rem",
+            marginBottom: "1.5rem",
             fontFamily: "var(--font-sans)",
             opacity: 0.95
           }}>
-            Hello i am Aryan Maurya
+            <div style={{ minHeight: "1.25em" }}>
+              {line1}
+              {activeCursor === "line1" && <span className="typing-cursor">|</span>}
+            </div>
+            <div style={{ minHeight: "1.25em" }} className="dynamic-gradient-text">
+              {line2}
+              {activeCursor === "line2" && <span className="typing-cursor">|</span>}
+            </div>
           </h1>
+
+          {/* Terminal Command Line */}
+          <div style={{
+            fontFamily: "var(--font-mono)",
+            fontSize: "clamp(0.85rem, 2vw, 1.1rem)",
+            marginBottom: "2.5rem",
+            display: "flex",
+            alignItems: "flex-start",
+            gap: "8px",
+            lineHeight: 1.5,
+            minHeight: "2em"
+          }}>
+            {(activeCursor === "terminal" || terminalText || activeCursor === "none") && (
+              <>
+                <span style={{ color: "#38bdf8", flexShrink: 0, fontWeight: 600 }}>aryan@root:~$</span>
+                <span style={{ color: "#e2e8f0", wordBreak: "break-word" }}>
+                  {terminalText}
+                  {activeCursor === "terminal" && <span className="terminal-cursor">█</span>}
+                </span>
+              </>
+            )}
+          </div>
 
           {/* Row of 5 buttons */}
           <div style={{
@@ -99,8 +184,8 @@ export default function Home() {
                   width: "7px",
                   height: "7px",
                   borderRadius: "50%",
-                  background: "#10b981",
-                  boxShadow: "0 0 6px #10b981",
+                  background: "#a855f7",
+                  boxShadow: "0 0 6px #a855f7",
                   marginRight: "8px"
                 }} />
               )}
@@ -117,8 +202,8 @@ export default function Home() {
                   width: "7px",
                   height: "7px",
                   borderRadius: "50%",
-                  background: "#10b981",
-                  boxShadow: "0 0 6px #10b981",
+                  background: "#ef4444",
+                  boxShadow: "0 0 6px #ef4444",
                   marginRight: "8px"
                 }} />
               )}
@@ -135,8 +220,8 @@ export default function Home() {
                   width: "7px",
                   height: "7px",
                   borderRadius: "50%",
-                  background: "#10b981",
-                  boxShadow: "0 0 6px #10b981",
+                  background: "#d946ef",
+                  boxShadow: "0 0 6px #d946ef",
                   marginRight: "8px"
                 }} />
               )}
@@ -145,58 +230,65 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Bottom Elements */}
-        {/* Bottom-left: Down arrow indicator */}
-        <button
-          onClick={scrollToHub}
-          style={{
-            position: "absolute",
-            bottom: "2.5rem",
-            left: "clamp(2rem, 8vw, 8rem)",
-            background: "transparent",
-            border: "none",
-            color: "#ffffff",
-            cursor: "pointer",
-            padding: "8px",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            opacity: 0.7,
-            transition: "opacity 0.3s ease, transform 0.3s ease",
-            zIndex: 2
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.opacity = "1";
-            e.currentTarget.style.transform = "translateY(4px)";
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.opacity = "0.7";
-            e.currentTarget.style.transform = "translateY(0)";
-          }}
-        >
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <line x1="12" y1="5" x2="12" y2="19"></line>
-            <polyline points="19 12 12 19 5 12"></polyline>
-          </svg>
-        </button>
+        {/* Bottom Elements Row */}
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: "1fr auto 1fr",
+          alignItems: "center",
+          width: "100%",
+          marginTop: "3rem",
+          zIndex: 2,
+          gap: "16px"
+        }}>
+          <div /> {/* Left empty space to push chevron to exact center */}
 
-        {/* Bottom-right: NEURAL DOCUMENTATION link */}
-        <Link
-          href="/neural-graph"
-          className="btn-xai-outline"
-          style={{
-            position: "absolute",
-            bottom: "2.5rem",
-            right: "clamp(2rem, 8vw, 8rem)",
-            padding: "8px 20px",
-            fontSize: "0.75rem",
-            letterSpacing: "0.1em",
-            fontWeight: 600,
-            zIndex: 2
-          }}
-        >
-          NEURAL DOCUMENTATION ↗
-        </Link>
+          {/* Down arrow indicator */}
+          <button
+            onClick={scrollToHub}
+            style={{
+              background: "transparent",
+              border: "none",
+              color: "#ffffff",
+              cursor: "pointer",
+              padding: "8px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              opacity: 0.7,
+              transition: "opacity 0.3s ease, transform 0.3s ease",
+              margin: "0 auto"
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.opacity = "1";
+              e.currentTarget.style.transform = "translateY(4px)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.opacity = "0.7";
+              e.currentTarget.style.transform = "translateY(0)";
+            }}
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <polyline points="19 12 12 19 5 12"></polyline>
+            </svg>
+          </button>
+
+          {/* NEURAL DOCUMENTATION link */}
+          <div style={{ display: "flex", justifyContent: "flex-end" }}>
+            <Link
+              href="/neural-graph"
+              className="btn-xai-outline"
+              style={{
+                padding: "8px 20px",
+                fontSize: "0.75rem",
+                letterSpacing: "0.1em",
+                fontWeight: 600
+              }}
+            >
+              NEURAL DOCUMENTATION ↗
+            </Link>
+          </div>
+        </div>
       </section>
 
       {/* Main Container */}
@@ -403,7 +495,7 @@ export default function Home() {
                             </p>
                             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "12px" }}>
                               <div style={{ fontSize: "0.85rem", color: "var(--foreground)", fontFamily: "var(--font-mono)" }}>
-                                <strong>Academic Track:</strong> Dual Degree Candidate • Core Mathematics Major
+                                <strong>Academic Track:</strong> Dual Degree • Core Mathematics Major
                               </div>
                               <a href="https://verify.bhu.ac.in/student/verify/eECba2CD-F10A-dF9F-7Aa0-C9a83f6b2CDc" target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: "4px", color: "var(--primary)", fontSize: "0.8rem", fontWeight: 600, textDecoration: "none" }}>
                                 Verify Student Profile ↗
@@ -457,7 +549,7 @@ export default function Home() {
                             </p>
                             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "12px" }}>
                               <div style={{ fontSize: "0.85rem", color: "var(--foreground)", fontFamily: "var(--font-mono)" }}>
-                                <strong>Academic Track:</strong> Dual Degree Candidate • Diploma Level (Diploma in Programming) (Online)
+                                <strong>Academic Track:</strong> Dual Degree • Diploma Level (Diploma in Programming) (Online)
                               </div>
                               <a href="https://ds.study.iitm.ac.in/student/24F2001627" target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: "4px", color: "var(--primary)", fontSize: "0.8rem", fontWeight: 600, textDecoration: "none" }}>
                                 Verify Student Profile ↗
@@ -801,6 +893,6 @@ export default function Home() {
         </footer>
 
       </div>
-    </>
+    </div>
   );
 }
