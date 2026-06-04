@@ -731,8 +731,28 @@ div[class*="glow-"] {
   --slate-900: #f0dedf;
   --border-color: rgba(217, 70, 239, 0.1);
   --glass-bg: rgba(217, 70, 239, 0.015);
-  --glass-border: rgba(217, 70, 239, 0.12);
 }
+
+.glow-finance {
+  --glow-color-1: rgba(6, 182, 212, 0.95); /* Cyan */
+  --glow-color-2: rgba(8, 145, 178, 0.6);
+  --glow-core-1: rgba(255, 255, 255, 1);
+  --glow-core-2: rgba(207, 250, 254, 0.95);
+  --glow-core-3: rgba(6, 182, 212, 0.7);
+  --primary: #06b6d4;
+  --secondary: #0891b2;
+  --primary-glow: rgba(6, 182, 212, 0.08);
+  --secondary-glow: rgba(8, 145, 178, 0.08);
+  --background: #010a0c; /* Extremely deep dark teal */
+  --foreground: #e6f7fa; /* Clean cyan white */
+  --slate-400: #879ea1; /* Readable teal-gray */
+  --slate-800: #aecdd2;
+  --slate-900: #d5eaf0;
+  --border-color: rgba(6, 182, 212, 0.1);
+  --glass-bg: rgba(6, 182, 212, 0.015);
+  --glass-border: rgba(6, 182, 212, 0.12);
+}
+
 
 /* Massive Glow (now dynamically colored) */
 .xai-glow-amber {

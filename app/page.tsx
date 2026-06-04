@@ -4,8 +4,9 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import ThreeBackground from "./components/ThreeBackground";
 import NeuralNetworkChord from "./components/NeuralNetworkChord";
+import FinanceDashboard from "./components/FinanceDashboard";
 
-type TabType = "education" | "projects" | "certificates" | "socials" | "neural";
+type TabType = "education" | "projects" | "certificates" | "socials" | "neural" | "finance";
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState<TabType>("projects");
@@ -13,6 +14,9 @@ export default function Home() {
   const [line2, setLine2] = useState("");
   const [terminalText, setTerminalText] = useState("");
   const [activeCursor, setActiveCursor] = useState<"line1" | "line2" | "terminal" | "none">("line1");
+
+
+
 
   useEffect(() => {
     const text1 = "Hello everyone!";
@@ -89,6 +93,8 @@ export default function Home() {
       hubSection.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+
 
   return (
     <div className={`glow-${activeTab}`}>
@@ -236,6 +242,24 @@ export default function Home() {
                 }} />
               )}
               SOCIAL CONNECT ↗
+            </button>
+
+            <button
+              onClick={() => handleTabClick("finance")}
+              className={activeTab === "finance" ? "btn-xai-white" : "btn-xai-outline"}
+            >
+              {activeTab === "finance" && (
+                <span style={{
+                  display: "inline-block",
+                  width: "7px",
+                  height: "7px",
+                  borderRadius: "50%",
+                  background: "#06b6d4",
+                  boxShadow: "0 0 6px #06b6d4",
+                  marginRight: "8px"
+                }} />
+              )}
+              FINANCIAL ANALYTICS ↗
             </button>
           </div>
         </div>
@@ -933,6 +957,10 @@ export default function Home() {
                 </div>
               )}
 
+              {/* TAB: FINANCE (FINANCIAL ANALYTICS) */}
+              {activeTab === "finance" && (
+                <FinanceDashboard />
+              )}
             </div>
 
           </section>
