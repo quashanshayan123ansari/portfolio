@@ -58,7 +58,7 @@ export default function MasterNeuralGraph() {
     // 1. Center Node
     const centerNode: GraphNode = {
       id: "center",
-      name: "Aryan Maurya",
+      name: "Um Mohammad",
       type: "center",
       angle: 0,
       radius: 0,
@@ -481,7 +481,7 @@ export default function MasterNeuralGraph() {
         color: "hsl(190, 95%, 50%)",
         glowColor: "rgba(6, 182, 212, 0.2)",
         description: "Expert rank acknowledging advanced data visualization notebooks, model validation, and high-engagement exploratory data science runs.",
-        url: "https://www.kaggle.com/aryanbhu",
+        url: "https://www.kaggle.com/quashanshayan123ansari",
       },
       // IIT Madras Certificates
       {
@@ -579,7 +579,7 @@ export default function MasterNeuralGraph() {
         color: "hsl(350, 95%, 55%)",
         glowColor: "rgba(244, 63, 94, 0.2)",
         description: "A serverless GenAI RAG system and interactive Next.js dashboard integrating Meta Llama 3 via Hugging Face inference and Three.js 3D WebGL simulations, powered by GCP pipelines.",
-        url: "https://github.com/aryanRN2/workshop-helper",
+        url: "https://github.com/quashanshayan123ansari/workshop-helper",
       },
     ];
 
@@ -1416,7 +1416,7 @@ export default function MasterNeuralGraph() {
         ctx.save();
 
         if (node.type === "center") {
-          // Aryan Maurya node design
+          // Um Mohammad node design
           // Halo outer pulse
           const pulseRadius = (35 + Math.sin(globalAngle * 5) * 4) * baseScale;
           ctx.fillStyle = "rgba(79, 70, 229, 0.08)";

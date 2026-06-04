@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Aryan",
-  description: "Aryan Maurya's Portfolio Website",
+  title: "Um Mohammad",
+  description: "Um Mohammad's Portfolio Website",
   icons: {
     icon: "/logo.png",
   },

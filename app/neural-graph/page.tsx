@@ -2,7 +2,7 @@ import MasterNeuralGraph from "../components/MasterNeuralGraph";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Master Neural Map | Aryan Maurya",
+  title: "Master Neural Map | Um Mohammad",
   description: "An ultra-detailed data visualization and interactive neural network graph connecting projects, education, certificates, and socials.",
 };
 

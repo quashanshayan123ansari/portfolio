@@ -206,7 +206,7 @@ export default function Page() {
                       <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
                         <h3 style={{ fontSize: "1rem", fontWeight: 600 }}>Kaggle Notebooks Expert</h3>
                         <p style={{ color: "var(--slate-400)", fontSize: "0.8rem" }}>Kaggle Platform • 2025</p>
-                        <a href="https://www.kaggle.com/aryanbhu" target="_blank" rel="noopener noreferrer" style={{ fontSize: "0.75rem", color: "var(--primary)", fontWeight: 500, textDecoration: "none", marginTop: "4px" }}>
+                        <a href="https://www.kaggle.com/quashanshayan123ansari" target="_blank" rel="noopener noreferrer" style={{ fontSize: "0.75rem", color: "var(--primary)", fontWeight: 500, textDecoration: "none", marginTop: "4px" }}>
                           Verify Profile ↗
                         </a>
                       </div>
@@ -218,7 +218,7 @@ export default function Page() {
           </section>
         </main>
         <footer style={{ padding: "2rem", textAlign: "center", zIndex: 10 }}>
-          <p>© {new Date().getFullYear()} ARYAN MAURYA. BUILT WITH NEXT.JS, THREE.JS & TYPESCRIPT. LIGHTWEIGHT & FLUID.</p>
+          <p>© {new Date().getFullYear()} UM MOHAMMAD. BUILT WITH NEXT.JS, THREE.JS & TYPESCRIPT. LIGHTWEIGHT & FLUID.</p>
         </footer>
       </div>
     </>

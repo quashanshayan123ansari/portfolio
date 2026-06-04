@@ -35,7 +35,7 @@ export default function Page() {
                         <span className="tech-tag">Vercel</span>
                       </div>
                       <div style={{ display: "flex", gap: "16px", fontSize: "0.85rem", fontWeight: 500 }}>
-                        <a href="https://github.com/aryanRN2/DeepLink-social-platform" target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: "6px", color: "var(--primary)" }}>
+                        <a href="https://github.com/quashanshayan123ansari/DeepLink-social-platform" target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: "6px", color: "var(--primary)" }}>
                           Codebase ↗
                         </a>
                         <a href="https://deeplink-friends.vercel.app/" target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: "6px", color: "var(--secondary)" }}>
@@ -60,7 +60,7 @@ export default function Page() {
                         <span className="tech-tag">Vercel</span>
                       </div>
                       <div style={{ display: "flex", gap: "16px", fontSize: "0.85rem", fontWeight: 500 }}>
-                        <a href="https://github.com/aryanRN2/placement-project" target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: "6px", color: "var(--primary)" }}>
+                        <a href="https://github.com/quashanshayan123ansari/placement-project" target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: "6px", color: "var(--primary)" }}>
                           Codebase ↗
                         </a>
                         <a href="https://placement-project-delta.vercel.app/" target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: "6px", color: "var(--secondary)" }}>
@@ -85,7 +85,7 @@ export default function Page() {
                         <span className="tech-tag">Vercel</span>
                       </div>
                       <div style={{ display: "flex", gap: "16px", fontSize: "0.85rem", fontWeight: 500 }}>
-                        <a href="https://github.com/aryanRN2/placement-project" target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: "6px", color: "var(--primary)" }}>
+                        <a href="https://github.com/quashanshayan123ansari/placement-project" target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: "6px", color: "var(--primary)" }}>
                           Codebase ↗
                         </a>
                         <a href="https://vrs-library.vercel.app/" target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: "6px", color: "var(--secondary)" }}>
@@ -110,7 +110,7 @@ export default function Page() {
                         <span className="tech-tag">Vercel</span>
                       </div>
                       <div style={{ display: "flex", gap: "16px", fontSize: "0.85rem", fontWeight: 500 }}>
-                        <a href="https://github.com/aryanRN2/img-to-pdf" target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: "6px", color: "var(--primary)" }}>
+                        <a href="https://github.com/quashanshayan123ansari/img-to-pdf" target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: "6px", color: "var(--primary)" }}>
                           Codebase ↗
                         </a>
                         <a href="https://aryanpdf.vercel.app" target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: "6px", color: "var(--secondary)" }}>
@@ -135,7 +135,7 @@ export default function Page() {
                         <span className="tech-tag">AI UI</span>
                       </div>
                       <div style={{ display: "flex", gap: "16px", fontSize: "0.85rem", fontWeight: 500 }}>
-                        <a href="https://github.com/aryanRN2/ai-chatbot" target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: "6px", color: "var(--primary)" }}>
+                        <a href="https://github.com/quashanshayan123ansari/ai-chatbot" target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: "6px", color: "var(--primary)" }}>
                           Codebase ↗
                         </a>
                         <a href="https://rn-ai-120b.vercel.app/" target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: "6px", color: "var(--secondary)" }}>
@@ -161,7 +161,7 @@ export default function Page() {
                         <span className="tech-tag">RAG</span>
                       </div>
                       <div style={{ display: "flex", gap: "16px", fontSize: "0.85rem", fontWeight: 500 }}>
-                        <a href="https://github.com/aryanRN2/workshop-helper" target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: "6px", color: "var(--primary)" }}>
+                        <a href="https://github.com/quashanshayan123ansari/workshop-helper" target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: "6px", color: "var(--primary)" }}>
                           Codebase ↗
                         </a>
                       </div>
@@ -173,7 +173,7 @@ export default function Page() {
           </section>
         </main>
         <footer style={{ padding: "2rem", textAlign: "center", zIndex: 10 }}>
-          <p>© {new Date().getFullYear()} ARYAN MAURYA. BUILT WITH NEXT.JS, THREE.JS & TYPESCRIPT. LIGHTWEIGHT & FLUID.</p>
+          <p>© {new Date().getFullYear()} UM MOHAMMAD. BUILT WITH NEXT.JS, THREE.JS & TYPESCRIPT. LIGHTWEIGHT & FLUID.</p>
         </footer>
       </div>
     </>
