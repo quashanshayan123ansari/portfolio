@@ -40,6 +40,48 @@ export default function Page() {
                       </div>
                     </div>
 
+                    {/* IIT Guwahati Classical Machine Learning */}
+                    <div className="glass-panel certificate-card">
+                      <div className="certificate-icon" style={{ background: "rgba(220, 38, 38, 0.08)" }}>
+                        <img src="/iitg-logo.svg" width="24" height="24" alt="IIT Guwahati" />
+                      </div>
+                      <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
+                        <h3 style={{ fontSize: "1.0rem", fontWeight: 600 }}>Classical Machine Learning</h3>
+                        <p style={{ color: "var(--slate-400)", fontSize: "0.8rem" }}>IIT Guwahati • 2026</p>
+                        <a href="https://drive.google.com/file/d/1IT-4CqrtgAlkz4v97YVif9jLDMMbfVmr/view" target="_blank" rel="noopener noreferrer" style={{ fontSize: "0.75rem", color: "var(--primary)", fontWeight: 500, textDecoration: "none", marginTop: "4px" }}>
+                          Verify Credential ↗
+                        </a>
+                      </div>
+                    </div>
+
+                    {/* IIT Madras Introduction to Cloud Computing with GCP */}
+                    <div className="glass-panel certificate-card">
+                      <div className="certificate-icon" style={{ background: "rgba(180, 20, 20, 0.08)" }}>
+                        <img src="/iitm-logo.svg" width="24" height="24" alt="IIT Madras" />
+                      </div>
+                      <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
+                        <h3 style={{ fontSize: "1.0rem", fontWeight: 600 }}>Introduction to Cloud Computing with GCP</h3>
+                        <p style={{ color: "var(--slate-400)", fontSize: "0.8rem" }}>IIT Madras • 2026</p>
+                        <a href="https://drive.google.com/file/d/1r3OyHGpEi-kCKcDdfkSgxpGYgL1kI-S4/view" target="_blank" rel="noopener noreferrer" style={{ fontSize: "0.75rem", color: "var(--primary)", fontWeight: 500, textDecoration: "none", marginTop: "4px" }}>
+                          Verify Credential ↗
+                        </a>
+                      </div>
+                    </div>
+
+                    {/* IIT Madras Git & GitHub Workshop */}
+                    <div className="glass-panel certificate-card">
+                      <div className="certificate-icon" style={{ background: "rgba(180, 20, 20, 0.08)" }}>
+                        <img src="/iitm-logo.svg" width="24" height="24" alt="IIT Madras" />
+                      </div>
+                      <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
+                        <h3 style={{ fontSize: "1.0rem", fontWeight: 600 }}>Code, Commit, Collaborate: Hands-on with Git & GitHub</h3>
+                        <p style={{ color: "var(--slate-400)", fontSize: "0.8rem" }}>IIT Madras • 2026</p>
+                        <a href="https://drive.google.com/file/d/1b3oDK2vTlGj4uoe-RwbntxgdNJfQx9tH/view" target="_blank" rel="noopener noreferrer" style={{ fontSize: "0.75rem", color: "var(--primary)", fontWeight: 500, textDecoration: "none", marginTop: "4px" }}>
+                          Verify Credential ↗
+                        </a>
+                      </div>
+                    </div>
+
                     {/* Real Cert 2: DeepLearning.AI Andrew Ng Course 3 */}
                     <div className="glass-panel certificate-card">
                       <div className="certificate-icon" style={{ background: "rgba(79, 70, 229, 0.08)" }}>

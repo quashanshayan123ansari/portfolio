@@ -483,6 +483,31 @@ export default function MasterNeuralGraph() {
         description: "Expert rank acknowledging advanced data visualization notebooks, model validation, and high-engagement exploratory data science runs.",
         url: "https://www.kaggle.com/aryanbhu",
       },
+      // IIT Madras Certificates
+      {
+        id: "cert_iitm_gcp",
+        name: "IITM Cloud Computing with GCP Cert",
+        type: "data",
+        hubId: "inst_iitm",
+        angle: 145 * Math.PI / 180,
+        radius: 280,
+        color: "hsl(195, 90%, 55%)",
+        glowColor: "rgba(6, 182, 212, 0.2)",
+        description: "IIT Madras certification for the workshop 'Introduction to Cloud Computing with GCP'.",
+        url: "https://drive.google.com/file/d/1r3OyHGpEi-kCKcDdfkSgxpGYgL1kI-S4/view",
+      },
+      {
+        id: "cert_iitm_git",
+        name: "IITM Git & GitHub Cert",
+        type: "data",
+        hubId: "inst_iitm",
+        angle: 148 * Math.PI / 180,
+        radius: 280,
+        color: "hsl(195, 90%, 55%)",
+        glowColor: "rgba(6, 182, 212, 0.2)",
+        description: "IIT Madras certification for the workshop 'Code, Commit, Collaborate: Hands-on with Git & GitHub'.",
+        url: "https://drive.google.com/file/d/1b3oDK2vTlGj4uoe-RwbntxgdNJfQx9tH/view",
+      },
       // Projects
       {
         id: "proj_deeplink",
@@ -543,6 +568,18 @@ export default function MasterNeuralGraph() {
         glowColor: "rgba(244, 63, 94, 0.2)",
         description: "An intelligent, custom conversational interface featuring natural typing visualizers and context-preserving system instructions.",
         url: "https://rn-ai-120b.vercel.app/",
+      },
+      {
+        id: "proj_workshop",
+        name: "Workshop Helper",
+        type: "data",
+        hubId: "hub_projects",
+        angle: 262 * Math.PI / 180,
+        radius: 280,
+        color: "hsl(350, 95%, 55%)",
+        glowColor: "rgba(244, 63, 94, 0.2)",
+        description: "A serverless GenAI RAG system and interactive Next.js dashboard integrating Meta Llama 3 via Hugging Face inference and Three.js 3D WebGL simulations, powered by GCP pipelines.",
+        url: "https://github.com/aryanRN2/workshop-helper",
       },
     ];
 
@@ -606,6 +643,17 @@ export default function MasterNeuralGraph() {
         description: "Multi-step chains, cyclic agent state graphs, tool bindings, and structured output parsing.",
       },
       {
+        id: "skill_rag",
+        name: "RAG Architecture",
+        type: "skill",
+        hubId: "domain_agentic",
+        angle: -23 * Math.PI / 180,
+        radius: 280,
+        color: "hsl(175, 95%, 45%)",
+        glowColor: "rgba(13, 148, 136, 0.2)",
+        description: "Retrieval-Augmented Generation (RAG) system design, including chunking, document parsing, lexical and vector databases retrieval optimization.",
+      },
+      {
         id: "skill_vectordb",
         name: "Vector Databases",
         type: "skill",
@@ -615,6 +663,17 @@ export default function MasterNeuralGraph() {
         color: "hsl(175, 95%, 45%)",
         glowColor: "rgba(13, 148, 136, 0.2)",
         description: "High-dimensional index lookup, cosine similarity, collection sharding, and semantic caching (Pinecone, ChromaDB).",
+      },
+      {
+        id: "skill_prompt_eng",
+        name: "Prompt Engineering",
+        type: "skill",
+        hubId: "domain_agentic",
+        angle: -15 * Math.PI / 180,
+        radius: 280,
+        color: "hsl(175, 95%, 45%)",
+        glowColor: "rgba(13, 148, 136, 0.2)",
+        description: "Instruction templates, persona design, few-shot prompting, system-level safety shielding constraints, and guardrails implementation.",
       },
       {
         id: "skill_semantic",
@@ -805,6 +864,28 @@ export default function MasterNeuralGraph() {
         glowColor: "rgba(249, 115, 22, 0.2)",
         description: "Scientific typesetting, academic paper preparation, mathematical formula formatting, and document rendering.",
       },
+      {
+        id: "skill_threejs",
+        name: "Three.js & WebGL",
+        type: "skill",
+        hubId: "domain_dev",
+        angle: 69 * Math.PI / 180,
+        radius: 280,
+        color: "hsl(30, 95%, 50%)",
+        glowColor: "rgba(249, 115, 22, 0.2)",
+        description: "Interactive 3D graphics rendering, custom shaders, physics engines, camera tracking, and WebGL animation pipelines.",
+      },
+      {
+        id: "skill_gcp",
+        name: "Google Cloud Platform",
+        type: "skill",
+        hubId: "domain_dev",
+        angle: 73 * Math.PI / 180,
+        radius: 280,
+        color: "hsl(30, 95%, 50%)",
+        glowColor: "rgba(249, 115, 22, 0.2)",
+        description: "Cloud Storage (GCS), Eventarc trigger handling, Cloud Run functions orchestration, Pub/Sub message streaming, and sandbox environments configuration.",
+      },
     ];
 
     const allNodes: GraphNode[] = [
@@ -860,6 +941,16 @@ export default function MasterNeuralGraph() {
       proj_library: ["skill_python", "skill_sql", "skill_nextjs", "skill_html_css", "skill_git"],
       proj_pdf: ["skill_javascript", "skill_nextjs", "skill_html_css", "skill_vercel"],
       proj_chatbot: ["skill_transformers", "skill_langchain", "skill_nextjs", "skill_typescript"],
+      proj_workshop: [
+        "skill_rag",
+        "skill_transformers",
+        "skill_prompt_eng",
+        "skill_nextjs",
+        "skill_typescript",
+        "skill_threejs",
+        "skill_gcp",
+        "skill_docker"
+      ],
 
       // Education
       // Education — BHU degree + all subject nodes
@@ -885,6 +976,8 @@ export default function MasterNeuralGraph() {
 
       // Certificates
       cert_google_analytics: ["skill_stats", "skill_sql", "skill_r_lang"],
+      cert_iitm_gcp: ["skill_gcp", "skill_docker"],
+      cert_iitm_git: ["skill_git"],
       cert_stanford_unsupervised: ["skill_python", "skill_dl_theory", "skill_scikit"],
       cert_langchain_llm: ["skill_python", "skill_langchain", "skill_transformers"],
       cert_swe_intern: ["skill_python", "skill_git", "skill_sql"],
