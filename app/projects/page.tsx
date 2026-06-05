@@ -167,6 +167,32 @@ export default function Page() {
                       </div>
                     </div>
 
+                    {/* Project 7: CricPredict AI */}
+                    <div className="glass-panel project-card">
+                      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "16px" }}>
+                        <h3 style={{ fontSize: "1.2rem", fontWeight: 600 }}>CricPredict AI</h3>
+                        <span style={{ fontSize: "0.75rem", fontFamily: "var(--font-mono)", color: "var(--secondary)" }}>2026</span>
+                      </div>
+                      <p style={{ color: "var(--slate-400)", fontSize: "0.9rem", lineHeight: 1.5, flexGrow: 1, marginBottom: "20px" }}>
+                        A full-stack AI cricket winner prediction platform with a holographic dashboard, multi-factor analytical engine (H2H, Form, Venue, Format), and PostgreSQL-backed confidence scoring via Supabase and Prisma.
+                      </p>
+                      <div style={{ display: "flex", gap: "8px", flexWrap: "wrap", marginBottom: "20px" }}>
+                        <span className="tech-tag">Next.js 16</span>
+                        <span className="tech-tag">Prisma</span>
+                        <span className="tech-tag">PostgreSQL</span>
+                        <span className="tech-tag">Supabase</span>
+                        <span className="tech-tag">TypeScript</span>
+                      </div>
+                      <div style={{ display: "flex", gap: "16px", fontSize: "0.85rem", fontWeight: 500 }}>
+                        <a href="https://github.com/quashanshayan123ansari/sports-prediction" target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: "6px", color: "var(--primary)" }}>
+                          Codebase ↗
+                        </a>
+                        <a href="https://sports-prediction-gold.vercel.app/" target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: "6px", color: "var(--secondary)" }}>
+                          Live Demo ↗
+                        </a>
+                      </div>
+                    </div>
+
                   </div>
                 </div>
             </div>

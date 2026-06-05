@@ -7,7 +7,7 @@ import ThreeBackground from "../components/ThreeBackground";
 /* ─────────────────────────────────────────
    ALL CERTIFICATES — verified from LinkedIn
 ───────────────────────────────────────────*/
-const CERTS = [
+export const CERTS = [
   {
     title: "McKinsey Forward Program",
     issuer: "McKinsey.org",

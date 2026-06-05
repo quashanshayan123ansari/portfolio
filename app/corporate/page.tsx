@@ -7,24 +7,24 @@ import FinanceDashboard from "../components/FinanceDashboard";
 export default function Page() {
   return (
     <>
-      <ThreeBackground activeTab="finance" />
-      <div className="container glow-finance" style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
+      <ThreeBackground activeTab="corporate" />
+      <div className="container glow-corporate" style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
         <header style={{ padding: "2rem clamp(2rem, 8vw, 8rem)", zIndex: 10, display: "flex", justifyContent: "space-between", alignItems: "center" }}>
           <Link href="/" className="btn-xai-outline" style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>
             ← BACK TO HOME
           </Link>
-          <Link href="/corporate" className="btn-xai-green" style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>
-            VIEW CORPORATE DASHBOARD →
+          <Link href="/finance" className="btn-xai-white" style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>
+            VIEW INVESTMENT ANALYTICS →
           </Link>
         </header>
         <main style={{ flex: 1, padding: "2rem 0" }}>
           <section className="animate-fade-in-up" style={{ padding: "0 clamp(2rem, 8vw, 8rem)" }}>
             <div style={{ minHeight: "400px" }}>
               <FinanceDashboard 
-                defaultTab="wealth" 
-                allowedTabs={["wealth", "optimization"]} 
-                title="Financial Analytics & Optimization"
-                subtitle="Interactive Modern Portfolio Theory (MPT) simulator combined with a stochastic Monte Carlo wealth projector. Adjust weights manually or run advanced mathematical optimizations."
+                defaultTab="corporate" 
+                allowedTabs={["corporate", "dmart"]} 
+                title="Corporate Performance Dashboard"
+                subtitle="Enterprise financial metrics and trends reconstructed from actual performance datasets, featuring a multi-page interactive layout."
               />
             </div>
           </section>
