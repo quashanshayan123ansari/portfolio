@@ -58,7 +58,7 @@ export default function MasterNeuralGraph() {
     // 1. Center Node
     const centerNode: GraphNode = {
       id: "center",
-      name: "Um Mohammad",
+      name: "Mohammad Quashan",
       type: "center",
       angle: 0,
       radius: 0,
@@ -1416,7 +1416,7 @@ export default function MasterNeuralGraph() {
         ctx.save();
 
         if (node.type === "center") {
-          // Um Mohammad node design
+          // Mohammad Quashan node design
           // Halo outer pulse
           const pulseRadius = (35 + Math.sin(globalAngle * 5) * 4) * baseScale;
           ctx.fillStyle = "rgba(79, 70, 229, 0.08)";

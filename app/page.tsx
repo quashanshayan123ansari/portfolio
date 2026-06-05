@@ -6,7 +6,7 @@ import ThreeBackground from "./components/ThreeBackground";
 import NeuralNetworkChord from "./components/NeuralNetworkChord";
 import FinanceDashboard from "./components/FinanceDashboard";
 
-type TabType = "education" | "projects" | "certificates" | "socials" | "neural" | "finance";
+type TabType = "education" | "projects" | "certificates" | "socials" | "neural" | "finance" | "research";
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState<TabType>("projects");
@@ -20,8 +20,8 @@ export default function Home() {
 
   useEffect(() => {
     const text1 = "Hello everyone!";
-    const text2 = "I am Um Mohammad";
-    const text3 = "automating model training pipelines, streamlining feature stores, configuring kubernetes clusters, and establishing end-to-end MLOps lifecycles.";
+    const text2 = "I am Quashan";
+    const text3 = "specializing in financial mathematics and quantitative finance, developing options pricing models, simulating stochastic processes, and engineering algorithmic trading frameworks.";
     
     let i1 = 0;
     let i2 = 0;
@@ -121,7 +121,7 @@ export default function Home() {
             fontWeight: 400,
             lineHeight: 1.15,
             letterSpacing: "-0.02em",
-            color: "#d4d4d8",
+            color: "var(--foreground)",
             marginBottom: "1.5rem",
             fontFamily: "var(--font-sans)",
             opacity: 0.95
@@ -149,8 +149,8 @@ export default function Home() {
           }}>
             {(activeCursor === "terminal" || terminalText || activeCursor === "none") && (
               <>
-                <span style={{ color: "#38bdf8", flexShrink: 0, fontWeight: 600 }}>um_mohammad@root:~$</span>
-                <span style={{ color: "#e2e8f0", wordBreak: "break-word" }}>
+                <span style={{ color: "#38bdf8", flexShrink: 0, fontWeight: 600 }}>quashan@root:~$</span>
+                <span style={{ color: "var(--foreground)", wordBreak: "break-word" }}>
                   {terminalText}
                   {(activeCursor === "terminal" || activeCursor === "none") && <span className="terminal-cursor">█</span>}
                 </span>
@@ -261,6 +261,24 @@ export default function Home() {
               )}
               FINANCIAL ANALYTICS ↗
             </button>
+
+            <button
+              onClick={() => handleTabClick("research")}
+              className={activeTab === "research" ? "btn-xai-white" : "btn-xai-outline"}
+            >
+              {activeTab === "research" && (
+                <span style={{
+                  display: "inline-block",
+                  width: "7px",
+                  height: "7px",
+                  borderRadius: "50%",
+                  background: "#10b981",
+                  boxShadow: "0 0 6px #10b981",
+                  marginRight: "8px"
+                }} />
+              )}
+              MY RESEARCH ↗
+            </button>
           </div>
         </div>
 
@@ -282,7 +300,7 @@ export default function Home() {
             style={{
               background: "transparent",
               border: "none",
-              color: "#ffffff",
+              color: "var(--foreground)",
               cursor: "pointer",
               padding: "8px",
               display: "flex",
@@ -874,13 +892,13 @@ export default function Home() {
                     </a>
 
                     {/* LinkedIn (Rich Brand Blue) */}
-                    <a href="https://www.linkedin.com/in/quashanshayan123ansari" target="_blank" rel="noopener noreferrer" className="glass-panel social-btn social-linkedin">
+                    <a href="https://www.linkedin.com/in/mqansari123" target="_blank" rel="noopener noreferrer" className="glass-panel social-btn social-linkedin">
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0z" fill="#0A66C2" />
                       </svg>
                       <div>
                         <div style={{ fontWeight: 600 }}>LinkedIn</div>
-                        <div style={{ fontSize: "0.75rem", opacity: 0.8, fontFamily: "var(--font-mono)" }}>@quashanshayan123ansari</div>
+                        <div style={{ fontSize: "0.75rem", opacity: 0.8, fontFamily: "var(--font-mono)" }}>@mqansari123</div>
                       </div>
                     </a>
 
@@ -891,7 +909,6 @@ export default function Home() {
                       </svg>
                       <div>
                         <div style={{ fontWeight: 600 }}>Kaggle</div>
-                        <div style={{ fontSize: "0.75rem", opacity: 0.8, fontFamily: "var(--font-mono)" }}>@quashanshayan123ansari</div>
                       </div>
                     </a>
 
@@ -902,7 +919,6 @@ export default function Home() {
                       </svg>
                       <div>
                         <div style={{ fontWeight: 600 }}>LeetCode</div>
-                        <div style={{ fontSize: "0.75rem", opacity: 0.8, fontFamily: "var(--font-mono)" }}>@quashanshayan123ansari</div>
                       </div>
                     </a>
 
@@ -914,7 +930,6 @@ export default function Home() {
                       </svg>
                       <div>
                         <div style={{ fontWeight: 600 }}>HackerRank</div>
-                        <div style={{ fontSize: "0.75rem", opacity: 0.8, fontFamily: "var(--font-mono)" }}>@quashanshayan123ansari</div>
                       </div>
                     </a>
 
@@ -929,8 +944,8 @@ export default function Home() {
                     <p style={{ color: "var(--slate-400)", fontSize: "0.95rem", marginTop: "4px" }}>Reach out directly via email</p>
                   </div>
 
-                  <div style={{ display: "flex", justifyContent: "center" }}>
-                    <div className="glass-panel" style={{ padding: "16px 20px", display: "flex", alignItems: "center", gap: "16px", maxWidth: "400px", width: "100%" }}>
+                  <div style={{ display: "flex", justifyContent: "center", gap: "16px", flexWrap: "wrap", maxWidth: "830px", margin: "0 auto" }}>
+                    <div className="glass-panel" style={{ padding: "16px 20px", display: "flex", alignItems: "center", gap: "16px", width: "100%", maxWidth: "390px", flex: "1 1 300px" }}>
                       <div style={{
                         width: "42px",
                         height: "42px",
@@ -953,6 +968,30 @@ export default function Home() {
                         </a>
                       </div>
                     </div>
+
+                    <div className="glass-panel" style={{ padding: "16px 20px", display: "flex", alignItems: "center", gap: "16px", width: "100%", maxWidth: "390px", flex: "1 1 300px" }}>
+                      <div style={{
+                        width: "42px",
+                        height: "42px",
+                        borderRadius: "10px",
+                        background: "rgba(6, 182, 212, 0.08)",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        border: "1px solid rgba(6, 182, 212, 0.15)",
+                        flexShrink: 0
+                      }}>
+                        <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="var(--secondary)" strokeWidth="2">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                      </div>
+                      <div style={{ overflow: "hidden" }}>
+                        <div style={{ fontSize: "0.75rem", fontFamily: "var(--font-mono)", color: "var(--slate-400)", textTransform: "uppercase", letterSpacing: "0.05em" }}>Contact Email</div>
+                        <a href="mailto:mdquashan7497@gmail.com" style={{ fontSize: "0.85rem", fontWeight: 600, color: "var(--slate-900)", textDecoration: "none", wordBreak: "break-all" }}>
+                          mdquashan7497@gmail.com
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </div>
               )}
@@ -960,6 +999,129 @@ export default function Home() {
               {/* TAB: FINANCE (FINANCIAL ANALYTICS) */}
               {activeTab === "finance" && (
                 <FinanceDashboard />
+              )}
+
+              {/* TAB: RESEARCH PAPERS */}
+              {activeTab === "research" && (
+                <div style={{ animation: "fadeInUp 0.5s ease forwards" }}>
+
+                  {/* Section header */}
+                  <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "1.75rem" }}>
+                    <div style={{
+                      width: "42px", height: "42px", borderRadius: "12px",
+                      background: "linear-gradient(135deg, rgba(16,185,129,0.15), rgba(6,182,212,0.15))",
+                      border: "1px solid rgba(16,185,129,0.25)",
+                      display: "flex", alignItems: "center", justifyContent: "center",
+                    }}>
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" strokeWidth="2">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                      </svg>
+                    </div>
+                    <div>
+                      <h2 style={{ fontSize: "1.35rem", fontWeight: 700, margin: 0, color: "var(--foreground)" }}>My Research Papers</h2>
+                      <p style={{ color: "var(--slate-400)", fontSize: "0.78rem", margin: 0 }}>Peer-reviewed academic publications · Quantitative Finance & Mathematics</p>
+                    </div>
+                  </div>
+
+                  {/* Paper card */}
+                  <div className="glass-panel" style={{
+                    padding: "28px 32px", borderRadius: "20px",
+                    position: "relative", overflow: "hidden",
+                    borderLeft: "4px solid #06b6d4",
+                  }}>
+                    <div style={{
+                      position: "absolute", top: "-40px", right: "-40px",
+                      width: "220px", height: "220px",
+                      background: "radial-gradient(circle, rgba(6,182,212,0.06) 0%, transparent 70%)",
+                      pointerEvents: "none",
+                    }}/>
+
+                    {/* Badges */}
+                    <div style={{ display: "flex", gap: "8px", flexWrap: "wrap", marginBottom: "14px" }}>
+                      {[
+                        { label: "✦ Published · May 2026", bg: "rgba(6,182,212,0.12)", color: "#06b6d4", border: "rgba(6,182,212,0.25)" },
+                        { label: "Peer Reviewed", bg: "rgba(16,185,129,0.12)", color: "#10b981", border: "rgba(16,185,129,0.25)" },
+                        { label: "DOI: 10.2139/ssrn.6692678", bg: "rgba(139,92,246,0.12)", color: "#8b5cf6", border: "rgba(139,92,246,0.25)" },
+                      ].map(b => (
+                        <span key={b.label} style={{
+                          fontSize: "0.68rem", fontWeight: 700, padding: "4px 12px", borderRadius: "20px",
+                          background: b.bg, color: b.color, border: `1px solid ${b.border}`,
+                          textTransform: "uppercase" as const, letterSpacing: "0.06em",
+                        }}>{b.label}</span>
+                      ))}
+                    </div>
+
+                    <h3 style={{ fontSize: "1.1rem", fontWeight: 750, color: "var(--foreground)", margin: "0 0 10px", lineHeight: 1.45, letterSpacing: "-0.01em" }}>
+                      Beyond Markowitz: Evaluating Maximum Diversification in Multi-Asset Portfolios Under Stressed Market Conditions
+                    </h3>
+                    <p style={{ color: "var(--foreground)", fontSize: "0.83rem", margin: "0 0 3px", fontWeight: 600 }}>
+                      Mohammad Quashan Ansari, Dr. Pankaj
+                    </p>
+                    <p style={{ color: "var(--slate-400)", fontSize: "0.79rem", margin: "0 0 3px", fontStyle: "italic" }}>
+                      Department of Mathematics, Banaras Hindu University (BHU), Varanasi
+                    </p>
+                    <p style={{ color: "var(--primary)", fontSize: "0.79rem", margin: "0 0 16px", fontWeight: 500 }}>
+                      International Journal of Research Publication and Reviews · May 2026
+                    </p>
+
+                    <div style={{ background: "rgba(0,0,0,0.03)", borderRadius: "12px", padding: "14px 16px", marginBottom: "14px", borderLeft: "3px solid rgba(6,182,212,0.3)" }}>
+                      <p style={{ color: "var(--slate-400)", fontSize: "0.82rem", lineHeight: 1.75, margin: 0 }}>
+                        <strong style={{ color: "var(--foreground)", fontSize: "0.72rem", textTransform: "uppercase" as const, letterSpacing: "0.06em" }}>Abstract — </strong>
+                        Investigates the limitations of Markowitz&apos;s Mean-Variance Optimization (MVO) — its sensitivity to estimation errors and instability during stressed market regimes — and evaluates Maximum Diversification (MD) portfolios as a robust alternative. Using data from the COVID-19 pandemic, the Russia-Ukraine conflict, and global interest rate tightening cycles, the study analyzes five major asset classes through Diversification Ratio, Sharpe Ratio, and realized volatility.
+                      </p>
+                    </div>
+
+                    {/* Keywords */}
+                    <div style={{ display: "flex", gap: "7px", flexWrap: "wrap", marginBottom: "16px" }}>
+                      {["Portfolio Optimization", "Maximum Diversification", "Markowitz MVO", "Quantitative Finance", "Market Stress", "Sharpe Ratio"].map(kw => (
+                        <span key={kw} style={{
+                          fontSize: "0.68rem", padding: "3px 10px", borderRadius: "20px",
+                          background: "rgba(6,182,212,0.08)", color: "var(--primary)",
+                          border: "1px solid rgba(6,182,212,0.18)", fontWeight: 500,
+                        }}>{kw}</span>
+                      ))}
+                    </div>
+
+                    {/* Links */}
+                    <div style={{ display: "flex", gap: "10px", flexWrap: "wrap", paddingTop: "14px", borderTop: "1px solid rgba(0,0,0,0.07)" }}>
+                      {[
+                        { label: "SSRN Abstract", href: "https://ssrn.com/abstract=6692678", c: "#a855f7", b: "rgba(168,85,247,0.10)", br: "rgba(168,85,247,0.25)" },
+                        { label: "DOI Link", href: "https://doi.org/10.2139/ssrn.6692678", c: "#06b6d4", b: "rgba(6,182,212,0.10)", br: "rgba(6,182,212,0.25)" },
+                        { label: "LinkedIn", href: "https://www.linkedin.com/in/mqansari123", c: "#0a66c2", b: "rgba(10,102,194,0.10)", br: "rgba(10,102,194,0.25)" },
+                      ].map(lk => (
+                        <a key={lk.label} href={lk.href} target="_blank" rel="noopener noreferrer" style={{
+                          display: "inline-flex", alignItems: "center", gap: "5px",
+                          padding: "7px 14px", borderRadius: "10px",
+                          background: lk.b, color: lk.c, border: `1px solid ${lk.br}`,
+                          fontSize: "0.76rem", fontWeight: 600, textDecoration: "none",
+                          transition: "opacity 0.2s ease",
+                        }}>{lk.label} ↗</a>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Coming soon */}
+                  <div style={{
+                    marginTop: "14px", padding: "18px 24px", borderRadius: "14px",
+                    background: "rgba(6,182,212,0.04)", border: "1px dashed rgba(6,182,212,0.25)",
+                    display: "flex", alignItems: "center", gap: "14px",
+                  }}>
+                    <div style={{
+                      width: "34px", height: "34px", borderRadius: "9px",
+                      background: "rgba(6,182,212,0.10)", border: "1px solid rgba(6,182,212,0.2)",
+                      display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0,
+                    }}>
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" strokeWidth="2">
+                        <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2" strokeLinecap="round"/>
+                      </svg>
+                    </div>
+                    <div>
+                      <p style={{ fontWeight: 600, fontSize: "0.85rem", margin: "0 0 2px", color: "var(--foreground)" }}>More research in progress</p>
+                      <p style={{ color: "var(--slate-400)", fontSize: "0.78rem", margin: 0 }}>Ongoing work in stochastic processes, options pricing models & algorithmic trading at BHU.</p>
+                    </div>
+                  </div>
+
+                </div>
               )}
             </div>
 
@@ -969,7 +1131,7 @@ export default function Home() {
 
         {/* Footer */}
         <footer>
-          <p>© {new Date().getFullYear()} UM MOHAMMAD. BUILT WITH NEXT.JS, THREE.JS & TYPESCRIPT. LIGHTWEIGHT & FLUID.</p>
+          <p>© {new Date().getFullYear()} Mohammad Quashan. Designed & built by Mohammad Quashan. All Rights Reserved.</p>
         </footer>
 
       </div>

@@ -22,7 +22,7 @@ export default function Page() {
           </section>
         </main>
         <footer style={{ padding: "2rem", textAlign: "center", zIndex: 10 }}>
-          <p>© {new Date().getFullYear()} UM MOHAMMAD. BUILT WITH NEXT.JS, THREE.JS & TYPESCRIPT. LIGHTWEIGHT & FLUID.</p>
+          <p>© {new Date().getFullYear()} Mohammad Quashan. Designed & built by Mohammad Quashan. All Rights Reserved.</p>
         </footer>
       </div>
     </>

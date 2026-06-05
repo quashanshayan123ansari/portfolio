@@ -38,13 +38,13 @@ export default function Page() {
                     </a>
 
                     {/* LinkedIn (Rich Brand Blue) */}
-                    <a href="https://www.linkedin.com/in/quashanshayan123ansari" target="_blank" rel="noopener noreferrer" className="glass-panel social-btn social-linkedin">
+                    <a href="https://www.linkedin.com/in/mqansari123" target="_blank" rel="noopener noreferrer" className="glass-panel social-btn social-linkedin">
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0z" fill="#0A66C2" />
                       </svg>
                       <div>
                         <div style={{ fontWeight: 600 }}>LinkedIn</div>
-                        <div style={{ fontSize: "0.75rem", opacity: 0.8, fontFamily: "var(--font-mono)" }}>@quashanshayan123ansari</div>
+                        <div style={{ fontSize: "0.75rem", opacity: 0.8, fontFamily: "var(--font-mono)" }}>@mqansari123</div>
                       </div>
                     </a>
 
@@ -55,7 +55,6 @@ export default function Page() {
                       </svg>
                       <div>
                         <div style={{ fontWeight: 600 }}>Kaggle</div>
-                        <div style={{ fontSize: "0.75rem", opacity: 0.8, fontFamily: "var(--font-mono)" }}>@quashanshayan123ansari</div>
                       </div>
                     </a>
 
@@ -66,7 +65,6 @@ export default function Page() {
                       </svg>
                       <div>
                         <div style={{ fontWeight: 600 }}>LeetCode</div>
-                        <div style={{ fontSize: "0.75rem", opacity: 0.8, fontFamily: "var(--font-mono)" }}>@quashanshayan123ansari</div>
                       </div>
                     </a>
 
@@ -78,7 +76,6 @@ export default function Page() {
                       </svg>
                       <div>
                         <div style={{ fontWeight: 600 }}>HackerRank</div>
-                        <div style={{ fontSize: "0.75rem", opacity: 0.8, fontFamily: "var(--font-mono)" }}>@quashanshayan123ansari</div>
                       </div>
                     </a>
 
@@ -92,8 +89,8 @@ export default function Page() {
                     <p style={{ color: "var(--slate-400)", fontSize: "0.95rem", marginTop: "4px" }}>Reach out directly via email</p>
                   </div>
 
-                  <div style={{ display: "flex", justifyContent: "center" }}>
-                    <div className="glass-panel" style={{ padding: "16px 20px", display: "flex", alignItems: "center", gap: "16px", maxWidth: "400px", width: "100%" }}>
+                  <div style={{ display: "flex", justifyContent: "center", gap: "16px", flexWrap: "wrap", maxWidth: "830px", margin: "0 auto" }}>
+                    <div className="glass-panel" style={{ padding: "16px 20px", display: "flex", alignItems: "center", gap: "16px", width: "100%", maxWidth: "390px", flex: "1 1 300px" }}>
                       <div style={{
                         width: "42px",
                         height: "42px",
@@ -116,13 +113,37 @@ export default function Page() {
                         </a>
                       </div>
                     </div>
+
+                    <div className="glass-panel" style={{ padding: "16px 20px", display: "flex", alignItems: "center", gap: "16px", width: "100%", maxWidth: "390px", flex: "1 1 300px" }}>
+                      <div style={{
+                        width: "42px",
+                        height: "42px",
+                        borderRadius: "10px",
+                        background: "rgba(6, 182, 212, 0.08)",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        border: "1px solid rgba(6, 182, 212, 0.15)",
+                        flexShrink: 0
+                      }}>
+                        <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="var(--secondary)" strokeWidth="2">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                      </div>
+                      <div style={{ overflow: "hidden" }}>
+                        <div style={{ fontSize: "0.75rem", fontFamily: "var(--font-mono)", color: "var(--slate-400)", textTransform: "uppercase", letterSpacing: "0.05em" }}>Contact Email</div>
+                        <a href="mailto:mdquashan7497@gmail.com" style={{ fontSize: "0.85rem", fontWeight: 600, color: "var(--slate-900)", textDecoration: "none", wordBreak: "break-all" }}>
+                          mdquashan7497@gmail.com
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </div>
             </div>
           </section>
         </main>
         <footer style={{ padding: "2rem", textAlign: "center", zIndex: 10 }}>
-          <p>© {new Date().getFullYear()} UM MOHAMMAD. BUILT WITH NEXT.JS, THREE.JS & TYPESCRIPT. LIGHTWEIGHT & FLUID.</p>
+          <p>© {new Date().getFullYear()} Mohammad Quashan. Designed & built by Mohammad Quashan. All Rights Reserved.</p>
         </footer>
       </div>
     </>
