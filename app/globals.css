@@ -654,26 +654,7 @@ div[class*="glow-"] {
   backface-visibility: hidden;
 }
 
-/* Tab specific glow themes */
-.glow-projects {
-  --glow-color-1: rgba(16, 185, 129, 0.2);
-  --glow-color-2: rgba(5, 150, 105, 0.1);
-  --glow-core-1: rgba(16, 185, 129, 0.3);
-  --glow-core-2: rgba(209, 250, 229, 0.2);
-  --glow-core-3: rgba(16, 185, 129, 0.1);
-  --primary: #059669;
-  --secondary: #047857;
-  --primary-glow: rgba(16, 185, 129, 0.05);
-  --secondary-glow: rgba(5, 150, 105, 0.05);
-  --background: #f0fdf4; /* Extremely light mint green */
-  --foreground: #14532d; /* Legible dark green */
-  --slate-400: #15803d; /* Readable green slate */
-  --slate-800: #166534;
-  --slate-900: #14532d;
-  --border-color: rgba(5, 150, 105, 0.15);
-  --glass-bg: rgba(255, 255, 255, 0.75);
-  --glass-border: rgba(5, 150, 105, 0.12);
-}
+
 
 .glow-education {
   --glow-color-1: rgba(139, 92, 246, 0.2);

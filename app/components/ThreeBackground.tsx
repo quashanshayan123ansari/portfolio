@@ -59,7 +59,7 @@ interface ThreeBackgroundProps {
   activeTab?: string;
 }
 
-export default function ThreeBackground({ activeTab = "projects" }: ThreeBackgroundProps) {
+export default function ThreeBackground({ activeTab = "education" }: ThreeBackgroundProps) {
   return (
     <div
       className={`glow-${activeTab}`}

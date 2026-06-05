@@ -122,15 +122,7 @@ export default function MasterNeuralGraph() {
         glowColor: "rgba(20, 184, 166, 0.2)",
         description: "Peer-reviewed scientific publications and quantitative finance research papers.",
       },
-      {
-        id: "hub_projects",
-        name: "Portfolio Projects",
-        group: "projects",
-        val: 12,
-        color: "#f43f5e", // Crimson
-        glowColor: "rgba(244, 63, 94, 0.2)",
-        description: "Full-scale software platforms, computational client engines, database indexers, and LLM chat interfaces.",
-      },
+
       {
         id: "domain_quant_finance",
         name: "Quantitative Finance & Risk",
@@ -809,68 +801,6 @@ export default function MasterNeuralGraph() {
         url: "https://ssrn.com/abstract=6692678",
       },
 
-      // --- PORTFOLIO PROJECTS ---
-      {
-        id: "proj_deeplink",
-        name: "DeepLink Social Platform",
-        group: "project_nodes",
-        val: 6,
-        color: "#f43f5e",
-        glowColor: "rgba(244, 63, 94, 0.15)",
-        description: "A beautiful links aggregator and deep-linking system that creates optimized paths for profile sharing and platform redirection.",
-        url: "https://deeplink-friends.vercel.app/",
-      },
-      {
-        id: "proj_placement",
-        name: "Placement Portal Delta",
-        group: "project_nodes",
-        val: 6,
-        color: "#f43f5e",
-        glowColor: "rgba(244, 63, 94, 0.15)",
-        description: "A high-performance recruitment tracker and analytics dashboard featuring database integrity layers and transactional data exports.",
-        url: "https://placement-project-delta.vercel.app/",
-      },
-      {
-        id: "proj_library",
-        name: "VRS Digital Library",
-        group: "project_nodes",
-        val: 6,
-        color: "#f43f5e",
-        glowColor: "rgba(244, 63, 94, 0.15)",
-        description: "A full-stack web library application featuring transactional member management, active waiting-rooms, and backup-recovery pipelines.",
-        url: "https://vrs-library.vercel.app/",
-      },
-      {
-        id: "proj_pdf",
-        name: "Img-To-PDF Converter",
-        group: "project_nodes",
-        val: 6,
-        color: "#f43f5e",
-        glowColor: "rgba(244, 63, 94, 0.15)",
-        description: "High-performance client-side images compiler to PDF. Supports batch selection, visual re-ordering, and zero-server compiling.",
-        url: "https://aryanpdf.vercel.app",
-      },
-      {
-        id: "proj_chatbot",
-        name: "AI Chatbot Client",
-        group: "project_nodes",
-        val: 6,
-        color: "#f43f5e",
-        glowColor: "rgba(244, 63, 94, 0.15)",
-        description: "An intelligent, custom conversational interface featuring natural typing visualizers and context-preserving system instructions.",
-        url: "https://rn-ai-120b.vercel.app/",
-      },
-      {
-        id: "proj_workshop",
-        name: "Workshop Helper",
-        group: "project_nodes",
-        val: 6,
-        color: "#f43f5e",
-        glowColor: "rgba(244, 63, 94, 0.15)",
-        description: "A serverless GenAI RAG system and interactive Next.js dashboard integrating Meta Llama 3 via Hugging Face inference and Three.js 3D WebGL simulations, powered by GCP pipelines.",
-        url: "https://github.com/quashanshayan123ansari/workshop-helper",
-      },
-
       // --- NEW CERTIFICATE-DERIVED SPECIALIZED SKILLS ---
       // 1. Quantitative Finance & Risk
       {
@@ -1085,7 +1015,7 @@ export default function MasterNeuralGraph() {
       else if (node.id.startsWith("cfi_")) targetHub = "inst_cfi";
       else if (node.id.startsWith("yale_")) targetHub = "inst_yale";
       else if (node.id.startsWith("gm_")) targetHub = "inst_yale"; // link global markets under yale
-      else if (node.id.startsWith("proj_")) targetHub = "hub_projects";
+
       else if (node.id === "cert_mckinsey_forward") targetHub = "inst_mckinsey";
       else if (node.id.endsWith("_sim")) targetHub = "inst_forage";
       else if (node.id === "cert_matlab_onramp") targetHub = "inst_mathworks";
@@ -1157,10 +1087,6 @@ export default function MasterNeuralGraph() {
       { source: "cert_hp_marketing", target: "skill_digital_marketing" },
       { source: "cert_hp_marketing", target: "skill_digital_entrepreneurship" },
 
-      // Projects
-      { source: "proj_workshop", target: "skill_data_viz" },
-      { source: "proj_placement", target: "skill_data_viz" },
-      { source: "proj_chatbot", target: "skill_realtime_feeds" },
     ];
 
     skillLinks.forEach((link) => {
@@ -1222,7 +1148,7 @@ export default function MasterNeuralGraph() {
 
           // 4. Render Permanent labels text directly underneath the node
           const label = node.name;
-          const isHubOrCenter = node.group === "center" || node.group === "education" || node.group === "finance" || node.group === "leadership" || node.group === "research" || node.group === "projects" || node.group === "skills_domain";
+          const isHubOrCenter = node.group === "center" || node.group === "education" || node.group === "finance" || node.group === "leadership" || node.group === "research" || node.group === "skills_domain";
 
           let fontSize = isHubOrCenter ? 12 : 8.5;
           
